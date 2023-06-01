@@ -8,13 +8,29 @@
     */
 
     //ENTRADA
-    const num1 = Number(prompt("Informe 1 número"));
-    const num2 = Number(prompt("Informe um segundo número"));
-    const operação = Number(prompt("Qual operação você deseja realizar? soma (+), subtração (-), multiplicação (*) ou divisão (/)"));
+    const num1 = Number(prompt("Informe 1 número").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe um segundo número").trim().replace(",", "."));
+    const operação = Number(prompt("Qual operação você deseja realizar? soma (+), subtração (-), multiplicação (*) ou divisão (/)").trim().replace(",", "."));
+    let resultado = 0
 
     //PROCESSAMENTO
-    if(operação === "+"){
-        const soma = num1 + num2
+    if(operação == "+"){
+        resultado = num1 + num2
+    }
+    else if(operação == "-"){
+        resultado = num1 - num2
+    }
+    else if(operação == "*"){
+        resultado = num1 * num2
+    }
+    else if(operação == "/"){
+        resultado = num1 / num2
+    }
+    else{
+        alert(`Resultado Inválido`);
+    }
+    if(resultado % 2 === 0 && resultado >= 0 && Number.isInteger(resultado)){
+        alert(`${resultado} ele é par, positivo e inteiro`)
     }
 
     //SAÍDA

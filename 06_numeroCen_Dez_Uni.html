@@ -11,35 +11,33 @@
     */
 
     //ENTRADA
-    let num = Number(prompt("Insira um número inteiro, menor que 1000"));
-
-    //PROCESSAMENTO
+    let num = Number(prompt("Insira um número inteiro menor que 1000!"));
+    let mensagemFinal = `O número ${num}, o script fornece `;
+    
     const centena = Math.floor(num / 100);
-    const dezena = Math.floor((num % 100) / 10);
-    const unidade = num % 10;
+    num = num % 100;
+    const dezena = Math.floor(num / 10);
+    num = num % 10;
+    const unidade = num;
 
-    if (num >= 1000) {
-        alert(`O número é maior que 1000, adicione um número menor que 1000`)
+    if(centena > 0){
+        mensagemFinal = mensagemFinal + `${centena} centena`;
     }
-    else if(num > 99){
-        alert(`${centena} centenas, ${dezena} dezenas e ${unidade} unidades`)
+    if(dezena > 0 || unidade > 0){
+        if(dezena > 0){
+            if(unidade > 0){
+                mensagemFinal = mensagemFinal + `, `;
+            }
+            else{
+                mensagemFinal = mensagemFinal + ` e `;
+            }
+            mensagemFinal = mensagemFinal + `${dezena} dezena`
+        }
+        if(unidade > 0){
+            mensagemFinal = mensagemFinal + ` e ${unidade} unidade`
+        }
     }
-    else if(num > 9 && num < 100){
-        alert(`${dezena} dezenas, ${unidade} unidades`)
-    }
-    else if(num > 1){
-        alert(`${unidade} unidades`)
-    }
-    else if(num == 1){
-        alert(`${unidade} unidade`)
-    }
-    else if(num == 100){
-        alert(`${centena} centena`)
-    }
-    else if(num == 10){
-        alert(`${dezena} dezena`)
-    }
-
+    alert(mensagemFinal)
 
 
 
