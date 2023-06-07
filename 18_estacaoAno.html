@@ -6,9 +6,34 @@
     */
 
     //ENTRADA
-
+    const hemisfério = prompt("Informe em qual hemisfério está(Responda com S=sul, N=norte):").toUpperCase();
+    const mês = Number(prompt("Qual o mês atual?(em número, EX: 2 = fevereiro)"));
 
     //PROCESSAMENTO
+    if(hemisfério == "s" && mês == 1 || mês == 2 || mês == 3 ){
+        alert(`Está na estação, do verão!`)
+    }
+    else if(hemisfério == "s" && mês == 4 || mês == 5 || mês == 6){
+        alert(`Está na estação, do outono!`)
+    }
+    else if(hemisfério == "s" && mês == 7 || mês == 8 || mês == 9 ){
+        alert(`Está na estação, do inverno!`)
+    }
+    else if(hemisfério == "s" && mês == 10 || mês == 11 || mês == 12){
+        alert(`Está na estação, da primavera!`)
+    }
+    else if(hemisfério == "n" && mês == 1 || mês == 2 || mês == 3 ){
+        alert(`Está na estação, do inverno!`)
+    }
+    else if(hemisfério == "n" && mês == 4 || mês == 5 || mês == 6){
+        alert(`Está na estação, do primavera!`)
+    }
+    else if(hemisfério == "n" && mês == 7 || mês == 8 || mês == 9 ){
+        alert(`Está na estação, do verão!`)
+    }
+    else if(hemisfério == "n" && mês == 10 || mês == 11 || mês == 12){
+        alert(`Está na estação, da outono!`)
+    }
 
     
     //SAÍDA
