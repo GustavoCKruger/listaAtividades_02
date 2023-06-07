@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     //PROBLEMA
@@ -6,11 +7,20 @@
     */
 
     //ENTRADA
-
+    const num1 = Number(prompt("Informe um número e o script vai informar se é decimal ou inteiro"));
+    let decimal = Math.ceil(num1)
 
     //PROCESSAMENTO
+    if(num1 < decimal){
+        alert(`Decimal`)
+    }
+    else if(num1 == decimal){
+        alert(`Inteiro`)
+    }
+    else{
+        alert(`Opção Inválido`)
+    }
 
-    
     //SAÍDA
 
 

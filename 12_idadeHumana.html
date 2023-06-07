@@ -7,11 +7,25 @@
     // - cães grandes: fator 7.
 
     // Entrada
+    const idadeHumana = Number(prompt("Informe a sua idade(EX: 15), para podemos comparar com a do seu cachorro:"));
+    const porte = prompt("Informe o porte do seu cão.(responda com P, ou M ou G)").trim().toUpperCase();
+    const idadecão = Number(prompt("Informe a idade do seu cachorro(EX: 2)"));
 
-    
     // Processamento
+    let resultado = 0
+    if (porte == "P") {
+        resultado = idadecão * 5
+    }
+    else if (porte == "M") {
+        resultado = idadecão * 6
+    }
+    else if (porte == "G") {
+        resultado = idadecão * 7
+    }
+    else {
+        alert(`Opção Inválida!`)
+    }
 
-    
     // Saída
-
+    alert(`A sua idade é de ${idadeHumana} anos, e a do seu cachorro é ${resultado} anos(na idade humana)`);
 </script>
