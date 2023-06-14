@@ -35,10 +35,10 @@
     else if(resultado % 2 == 0 && resultado >= 0 && !Number.isInteger(resultado)){
         alert(`${resultado} ele é par, positivo e decimal`);
     }
-    else if(resultado % 2 == 0 && !resultado >= 0 && Number.isInteger(resultado)){
+    else if(resultado % 2 == 0 && !resultado < 0 && Number.isInteger(resultado)){
         alert(`${resultado} ele é par, negativo e inteiro`);
     }
-    else if(resultado % 2 == 0 && !resultado >= 0 && !Number.isInteger(resultado)){
+    else if(resultado % 2 == 0 && !resultado < 0 && !Number.isInteger(resultado)){
         alert(`${resultado} ele é par, negativo e decimal`);
     }
     else if(!resultado % 2 == 0 && resultado >= 0 && Number.isInteger(resultado)){
@@ -47,10 +47,10 @@
     else if(!resultado % 2 == 0 && resultado >= 0 && !Number.isInteger(resultado)){
         alert(`${resultado} ele é ímpar, positivo e decimal`);
     }
-    else if(!resultado % 2 == 0 && !resultado >= 0 && Number.isInteger(resultado)){
+    else if(!resultado % 2 == 0 && !resultado < 0 && Number.isInteger(resultado)){
         alert(`${resultado} ele é ímpar, negativo e inteiro`);
     }
-    else if(!resultado % 2 == 0 && !resultado >= 0 && !Number.isInteger(resultado)){
+    else if(!resultado % 2 == 0 && !resultado < 0 && !Number.isInteger(resultado)){
         alert(`${resultado} ele é ímpar, negativo e decimal`);
     }
 
