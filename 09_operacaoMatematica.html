@@ -7,7 +7,7 @@
     - inteiro ou decimal.
     */
     //Entrada
-    let num1 = Number(prompt("Informe um número").replace(",", ".").trim()); 
+    let num1 = Number(prompt("Informe um número").trim().replace(",", ".")); 
     const operacao = prompt("Qual a operação?(+,-,*,/)").trim().toLowerCase();
     let num2 = Number(prompt("Informe outro número.").replace(",", ".").trim());
     let mensagemFinal = `O resultado é `
